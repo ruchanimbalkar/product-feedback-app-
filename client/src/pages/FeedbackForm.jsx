@@ -54,7 +54,7 @@ export default function FeedbackForm() {
     await addOneSuggestion();
   };
   return (
-    <>
+    <div className="form-div">
       <a className="back-link" href="/">
         {backArrow} Go Back
       </a>
@@ -64,9 +64,9 @@ export default function FeedbackForm() {
             <IoAddCircleSharp />
           </legend>
           <h2>Create New Feedback</h2>
-          <p>
-            <label htmlFor="title">Feedback Title</label> Add a short,
-            descriptive headline
+          <div className="form-input-div">
+            <label htmlFor="title">Feedback Title</label>
+            <p>Add a short, descriptive headline</p>
             <input
               type="text"
               name="title"
@@ -74,10 +74,10 @@ export default function FeedbackForm() {
               value={formData.title}
               onChange={handleChange}
             />
-          </p>
-          <p>
+          </div>
+          <div className="form-input-div">
             <label htmlFor="category">Category</label>
-            Choose a category for your feedback
+            <p>Choose a category for your feedback</p>
             <select
               id="category"
               name="category"
@@ -91,10 +91,13 @@ export default function FeedbackForm() {
               <option value="Feature">Feature</option>
               <option value="Bug">Bug</option>
             </select>
-          </p>
-          <p>
-            <label htmlFor="suggestion">Feedback Detail</label> Include any
-            specific comments on what should be improved, added, etc.
+          </div>
+          <div className="form-input-div">
+            <label htmlFor="suggestion">Feedback Detail</label>
+            <p>
+              Include any specific comments on what should be improved, added,
+              etc.
+            </p>
             <textarea
               id="suggestion"
               name="suggestion"
@@ -102,11 +105,13 @@ export default function FeedbackForm() {
               rows="4"
               onChange={handleChange}
             />
-          </p>
-          <Button text="Cancel" handleClick={handleCancel} />
-          <Button text="Add Feedback" handleClick={handleSubmit} />
+          </div>
+          <div className="form-buttons-div">
+            <Button text="Cancel" handleClick={handleCancel} />
+            <Button text="Add Feedback" handleClick={handleSubmit} />
+          </div>
         </fieldset>
       </form>
-    </>
+    </div>
   );
 }
