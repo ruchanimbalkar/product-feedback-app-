@@ -10,6 +10,7 @@ export default function FeedbackForm() {
   const [formData, setFormData] = useState(emptyFormState);
 
   const addOneSuggestion = async () => {
+    console.log("running addOneSuggestion() function");
     //Send a POST request to the API with base url and endpoint /add-one-suggestion with headers and body
     const response = await fetch("/api/add-one-suggestion", {
       method: "POST",
@@ -33,6 +34,7 @@ export default function FeedbackForm() {
     //Convert the response to JSON format using json method
     const responseInJSONFormat = await response.json();
     console.log("response from post method: ", responseInJSONFormat);
+    //alert("Form Submitted successfully");
   };
   //Declare an event handler arrow function handleChange to handle changes in form input
   const handleChange = (e) => {
@@ -46,9 +48,10 @@ export default function FeedbackForm() {
     //resets the form to its initial state
     setFormData(emptyFormState);
   };
-  const handleSubmit = () => {
+  const handleSubmit = async () => {
+    console.log("Running handle submit function");
     //Send POST request to store form data in API on the server in function addOneSuggestion()
-    addOneSuggestion();
+    await addOneSuggestion();
   };
   return (
     <>

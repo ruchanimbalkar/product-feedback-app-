@@ -46,12 +46,10 @@ const getSuggestionsByCategory = async (category) => {
 };
 
 const addOneSuggestion = async (title, description, category) => {
-  const data = await db.query(
+  await db.query(
     "INSERT INTO suggestions (title, description, suggestion_type) VALUES ($1,$2,$3)",
     [title, description, category]
   );
-  let addedSuggestion = data;
-  console.log("addedSuggestion : ", data);
 };
 
 //API endpoints
