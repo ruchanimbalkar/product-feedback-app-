@@ -1,1 +1,29 @@
 /* Component-specific styles (this only affects the App component and its children) */
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: auto auto auto;
+  grid-template-areas:
+    "first-div header header"
+    "first-div ...  ..."
+    "second-div ... ..."
+    "... third-div ...";
+  gap: 1rem;
+}
+
+.child1 {
+  grid-area: first-div;
+}
+
+.child2 {
+  grid-area: second-div;
+}
+
+header {
+  grid-area: header;
+}
+
+.feedbacks-div {
+  grid-area: third-div;
+}

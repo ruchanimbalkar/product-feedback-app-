@@ -1,10 +1,16 @@
-import { useState, useEffect } from "react";
+import { Routes, Route } from "react-router-dom";
+//import pages
+import Home from "./pages/Home.jsx";
+import FeedbackForm from "./pages/FeedbackForm.jsx";
 import "./App.css";
 
 function App() {
   return (
     <>
-      <h1>Product Feedback Full-Stack App</h1>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/feedback" element={<FeedbackForm />} />
+      </Routes>
     </>
   );
 }
