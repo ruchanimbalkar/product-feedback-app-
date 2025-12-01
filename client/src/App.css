@@ -101,8 +101,7 @@ fieldset {
 }
 
 /* .form-buttons-div:first-child {
-  /* background-color: var(--carbon); //not working */
-} */
+  /* background-color: var(--carbon); }*/
 
 header {
   background-color: var(--carbon);
