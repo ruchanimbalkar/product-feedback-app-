@@ -1,7 +1,6 @@
 /* Global styles (this affects the whole application) */
 
 :root {
-  font-family: "Jost", sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
@@ -18,4 +17,9 @@
   --light-grey: #f7f8fd;
   --peach: #f49f85;
   --cute-blue: #62bcfa;
+}
+
+body {
+  background-color: var(--light-grey);
+  font-family: "Jost", sans-serif;
 }

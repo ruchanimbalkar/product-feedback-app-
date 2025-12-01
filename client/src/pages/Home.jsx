@@ -64,19 +64,22 @@ export default function Home() {
         </div>
         <header>
           <h2> {count} Suggestions</h2>
-          <li>
-            <Link to="/feedback">+ Add Feedback</Link>
-          </li>
+          <p>
+            <Link className="feedback-link" to="/feedback">
+              + Add Feedback
+            </Link>
+          </p>
         </header>
-        <div className="feedbacks-div"></div>
-        {suggestions.map((item, index) => (
-          <Card
-            title={item.title}
-            suggestion={item.description}
-            category={item.suggestion_type}
-            key={"item_" + index}
-          />
-        ))}
+        <div className="feedbacks-div">
+          {suggestions.map((item, index) => (
+            <Card
+              title={item.title}
+              suggestion={item.description}
+              category={item.suggestion_type}
+              key={"item_" + index}
+            />
+          ))}
+        </div>
       </div>
     </>
   );

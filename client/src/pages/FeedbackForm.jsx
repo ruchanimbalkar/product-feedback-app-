@@ -55,7 +55,9 @@ export default function FeedbackForm() {
   };
   return (
     <>
-      <a href="/">{backArrow} Go Back</a>
+      <a className="back-link" href="/">
+        {backArrow} Go Back
+      </a>
       <form>
         <fieldset>
           <legend>
