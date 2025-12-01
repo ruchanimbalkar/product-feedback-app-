@@ -1,7 +1,7 @@
 /* Global styles (this affects the whole application) */
 
 :root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: "Jost", sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
@@ -9,4 +9,13 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  --purple: #ad1fea;
+  --blue: #4661e6;
+  --carbon: #3a4374;
+  --whyt: #ffffff;
+  --greyish-black: #647196;
+  --sky-grey: #f2f4ff;
+  --light-grey: #f7f8fd;
+  --peach: #f49f85;
+  --cute-blue: #62bcfa;
 }
