@@ -2,6 +2,8 @@ import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 //import react icons
 import { IoBulbOutline } from "react-icons/io5";
+//Reference : https://cloudinary.com/guides/web-performance/5-ways-to-import-images-in-react-bonus-automation-method
+import myImage from "../assets/suggestions/illustration-empty.svg";
 
 //import components
 import Button from "../components/Button.jsx";
@@ -14,6 +16,7 @@ export default function Home() {
   const bulbIcon = <IoBulbOutline />;
   let noFeedbackScreen = (
     <div className="feedbacks-div">
+      <img src={myImage} alt="person with magnifying glass" />
       <h2> There is no feedback yet.</h2>
       <p> Got a suggestion? Found a bug that needs to be squashed? </p>
       <p>We love hearing about new ideas to improve our app.</p>
