@@ -165,3 +165,8 @@ header {
   color: var(--whyt);
   opacity: 0.5;
 }
+
+.child2 button:active {
+  background-color: var(--blue);
+  color: var(--whyt);
+}

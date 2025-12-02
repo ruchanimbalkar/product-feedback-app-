@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
+//import react icons
 import { IoBulbOutline } from "react-icons/io5";
+
 //import components
 import Button from "../components/Button.jsx";
 import Card from "../components/Card.jsx";
@@ -9,6 +11,7 @@ export default function Home() {
   const [suggestions, setSuggestions] = useState([]);
   const [count, setCount] = useState(0);
   const [url, setUrl] = useState("/api/get-all-suggestions");
+  const bulbIcon = <IoBulbOutline />;
   let noFeedbackScreen = (
     <div className="feedbacks-div">
       <h2> There is no feedback yet.</h2>
@@ -103,8 +106,7 @@ export default function Home() {
         <div className="item2">
           <header>
             <h2>
-              {" "}
-              <IoBulbOutline />
+              {bulbIcon}
               {count} Suggestions
             </h2>
             <p>
