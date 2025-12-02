@@ -166,7 +166,7 @@ header {
   opacity: 0.5;
 }
 
-.child2 button:active {
+.clicked {
   background-color: var(--blue);
   color: var(--whyt);
 }

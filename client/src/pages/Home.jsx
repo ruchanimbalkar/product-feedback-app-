@@ -13,6 +13,7 @@ export default function Home() {
   const [suggestions, setSuggestions] = useState([]);
   const [count, setCount] = useState(0);
   const [url, setUrl] = useState("/api/get-all-suggestions");
+  //const [click, setClick] = useState("");
   const bulbIcon = <IoBulbOutline />;
   let noFeedbackScreen = (
     <div className="feedbacks-div">
@@ -77,10 +78,12 @@ export default function Home() {
           </div>
           <div className="child2">
             <Button
+              className={click}
               text="All"
               handleClick={() => setUrl("/api/get-all-suggestions")}
             />
             <Button
+              className={click}
               text="UX"
               handleClick={() => setUrl("/api/get-suggestions-by-category/UX")}
             />
