@@ -32,8 +32,8 @@ export default function FeedbackForm() {
       return;
     }
     //Convert the response to JSON format using json method
-    const responseInJSONFormat = await response.json();
-    console.log("response from post method: ", responseInJSONFormat);
+    const responseInTextFormat = await response.text();
+    console.log("response from post method: ", responseInTextFormat);
     //alert("Form Submitted successfully");
   };
   //Declare an event handler arrow function handleChange to handle changes in form input
@@ -43,12 +43,9 @@ export default function FeedbackForm() {
     //set form data using the setter function setFormData
     setFormData((prevFormData) => ({ ...prevFormData, [name]: value }));
   };
-  const handleCancel = () => {
-    //Reset the form and go to main page
-    //resets the form to its initial state
-    setFormData(emptyFormState);
-  };
-  const handleSubmit = async () => {
+
+  const handleSubmit = async (event) => {
+    event.preventDefault();
     console.log("Running handle submit function");
     //Send POST request to store form data in API on the server in function addOneSuggestion()
     await addOneSuggestion();
@@ -61,7 +58,7 @@ export default function FeedbackForm() {
       <form>
         <fieldset>
           <legend>
-            <IoAddCircleSharp />
+            <IoAddCircleSharp className="circle-sharp" />
           </legend>
           <h2>Create New Feedback</h2>
           <div className="form-input-div">
@@ -107,8 +104,14 @@ export default function FeedbackForm() {
             />
           </div>
           <div className="form-buttons-div">
-            <Button text="Cancel" handleClick={handleCancel} />
-            <Button text="Add Feedback" handleClick={handleSubmit} />
+            <a className="cancel-button" href="/">
+              Cancel
+            </a>
+            <Button
+              className="submit-button"
+              text="Add Feedback"
+              handleClick={handleSubmit}
+            />
           </div>
         </fieldset>
       </form>

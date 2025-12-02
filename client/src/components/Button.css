@@ -1,3 +1,8 @@
 button {
   margin: 0.15rem;
+  cursor: pointer;
+}
+/* Pressed Effect Reference : https://www.w3schools.com/css/tryit.asp?filename=trycss_buttons_animate3 */
+button:active {
+  transform: translateY(4px);
 }

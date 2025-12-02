@@ -1,9 +1,16 @@
 //import styles
 import "./Button.css";
-export default function Button({ text, handleClick }) {
+export default function Button({ className = undefined, text, handleClick }) {
   return (
     <>
-      <button onClick={handleClick}>{text}</button>
+      {/* Reference : https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing */}
+      <button
+        type="button"
+        className={className ?? undefined}
+        onClick={handleClick}
+      >
+        {text}
+      </button>
     </>
   );
 }

@@ -1,6 +1,15 @@
 .card {
   background-color: var(--whyt);
-  border-radius: 0.3rem;
+  border-radius: 0.5rem;
   margin: 1rem;
   padding: 1rem;
+}
+
+.card p {
+  color: inherit;
+}
+.card h3,
+p,
+button {
+  margin-left: 3rem;
 }
