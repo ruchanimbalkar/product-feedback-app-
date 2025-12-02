@@ -34,7 +34,13 @@ export default function FeedbackForm() {
     //Convert the response to JSON format using json method
     const responseInTextFormat = await response.text();
     console.log("response from post method: ", responseInTextFormat);
-    //alert("Form Submitted successfully");
+    if (responseInTextFormat === "Success, suggestion was added") {
+      alert(
+        "Thank you for your valuable feedback. Form Submitted successfully!"
+      );
+    } else {
+      alert("Error submitting feedback! Sorry try again later!");
+    }
   };
   //Declare an event handler arrow function handleChange to handle changes in form input
   const handleChange = (e) => {

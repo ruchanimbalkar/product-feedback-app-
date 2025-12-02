@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
+import { IoBulbOutline } from "react-icons/io5";
 //import components
 import Button from "../components/Button.jsx";
 import Card from "../components/Card.jsx";
@@ -8,6 +9,30 @@ export default function Home() {
   const [suggestions, setSuggestions] = useState([]);
   const [count, setCount] = useState(0);
   const [url, setUrl] = useState("/api/get-all-suggestions");
+  let noFeedbackScreen = (
+    <div className="feedbacks-div">
+      <h2> There is no feedback yet.</h2>
+      <p> Got a suggestion? Found a bug that needs to be squashed? </p>
+      <p>We love hearing about new ideas to improve our app.</p>
+      <p>
+        <Link className="feedback-link" to="/feedback">
+          + Add Feedback
+        </Link>
+      </p>
+    </div>
+  );
+  let feedbackScreen = (
+    <div className="feedbacks-div">
+      {suggestions.map((item, index) => (
+        <Card
+          title={item.title}
+          suggestion={item.description}
+          category={item.suggestion_type}
+          key={"item_" + index}
+        />
+      ))}
+    </div>
+  );
 
   const getSuggestionsDataByCategory = async () => {
     try {
@@ -77,23 +102,18 @@ export default function Home() {
         </div>
         <div className="item2">
           <header>
-            <h2> {count} Suggestions</h2>
+            <h2>
+              {" "}
+              <IoBulbOutline />
+              {count} Suggestions
+            </h2>
             <p>
               <Link className="feedback-link" to="/feedback">
                 + Add Feedback
               </Link>
             </p>
           </header>
-          <div className="feedbacks-div">
-            {suggestions.map((item, index) => (
-              <Card
-                title={item.title}
-                suggestion={item.description}
-                category={item.suggestion_type}
-                key={"item_" + index}
-              />
-            ))}
-          </div>
+          {count ? feedbackScreen : noFeedbackScreen}
         </div>
       </div>
     </>
