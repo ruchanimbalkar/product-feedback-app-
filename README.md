@@ -54,7 +54,7 @@ These are the API endpoints I built:
 2. GET `/get-suggestions-by-category/:category`
 3. POST `/add-one-suggestion`
 
-Learn more about the API endpoints here: [insert link to API documentation]
+Learn more about the API endpoints [here:](./api-documentation.md)
 
 ## 🗄️ Database Schema
 
