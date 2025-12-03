@@ -127,14 +127,20 @@ header {
   gap: 0.2rem;
 }
 
+/*common styles in card buttons and filter buttons*/
 .card button,
 .child2 button {
-  background-color: var(--light-grey);
   border: 0.1rem solid transparent;
-  color: var(--blue);
   border-radius: 0.3rem;
   font-weight: bold;
   padding: 0.5rem;
+}
+
+/*common styles in card buttons and filter buttons*/
+.card button,
+.child2-button {
+  background-color: var(--light-grey);
+  color: var(--blue);
 }
 
 .card button:hover,
@@ -144,6 +150,7 @@ header {
   opacity: 0.5;
 }
 
+/*Style when button is clicked*/
 .clicked {
   background-color: var(--blue);
   color: var(--whyt);

@@ -4,23 +4,41 @@ import { useState, useEffect } from "react";
 import { IoBulbOutline } from "react-icons/io5";
 //Reference : https://cloudinary.com/guides/web-performance/5-ways-to-import-images-in-react-bonus-automation-method
 import myImage from "../assets/suggestions/illustration-empty.svg";
-
+import buttonData from "../buttonData.js";
 //import components
 import Button from "../components/Button.jsx";
 import Card from "../components/Card.jsx";
 export default function Home() {
   //Create a variable category and setter function using useState
   const [suggestions, setSuggestions] = useState([]);
+  //Create a variable count and setter function using useState
   const [count, setCount] = useState(0);
+  //Create a variable url and setter function using useState
   const [url, setUrl] = useState("/api/get-all-suggestions");
-  //const [click, setClick] = useState("");
+  //Create a variable click and setter function using useState
+  const [click, setClick] = useState([true, false, false, false, false, false]);
   const bulbIcon = <IoBulbOutline />;
+
+  let handleClick = (newUrl, index) => {
+    setUrl(newUrl);
+    // 1. Change all the values in click to false for all indices except index
+    let result = click.map((_, i) => {
+      if (i != index) {
+        return false;
+      } else {
+        return true;
+      }
+    });
+    console.log("result", result);
+    setClick(result);
+  };
+
   let noFeedbackScreen = (
     <div className="feedbacks-div">
       <img src={myImage} alt="person with magnifying glass" />
       <h2> There is no feedback yet.</h2>
       <p> Got a suggestion? Found a bug that needs to be squashed? </p>
-      <p>We love hearing about new ideas to improve our app.</p>
+      <p> We love hearing about new ideas to improve our app.</p>
       <p>
         <Link className="feedback-link" to="/feedback">
           + Add Feedback
@@ -77,34 +95,54 @@ export default function Home() {
             <p>Feedback board</p>
           </div>
           <div className="child2">
-            <Button
+            {buttonData.map((item, i) => (
+              <Button
+                className={click[item.index] ? "clicked" : "child2-button"}
+                text={item.text}
+                handleClick={() => handleClick(item.url, item.index)}
+                key={"index_" + i}
+              />
+            ))}
+            {/* <Button
+              className={click[0] ? "clicked" : "child2-button"}
               text="All"
-              handleClick={() => setUrl("/api/get-all-suggestions")}
+              handleClick={() => handleClick("/api/get-all-suggestions", 0)}
             />
             <Button
+              className={click[1] === true ? "clicked" : "child2-button"}
               text="UX"
-              handleClick={() => setUrl("/api/get-suggestions-by-category/UX")}
-            />
-            <Button
+              handleClick={() =>
+                handleClick("/api/get-suggestions-by-category/UX", 1)
+              }
+            /> */}
+            {/* <Button
+              className={click[2] === true ? "clicked" : "child2-button"}
               text="UI"
-              handleClick={() => setUrl("/api/get-suggestions-by-category/UI")}
+              handleClick={() =>
+                handleClick("/api/get-suggestions-by-category/UI", 2)
+              }
             />
             <Button
+              className={click[3] === true ? "clicked" : "child2-button"}
               text="Enhancement"
               handleClick={() =>
-                setUrl("/api/get-suggestions-by-category/Enhancement")
+                handleClick("/api/get-suggestions-by-category/Enhancement", 3)
               }
             />
             <Button
+              className={click[4] === true ? "clicked" : "child2-button"}
               text="Bug"
-              handleClick={() => setUrl("/api/get-suggestions-by-category/Bug")}
+              handleClick={() =>
+                handleClick("/api/get-suggestions-by-category/Bug", 4)
+              }
             />
             <Button
+              className={click[5] === true ? "clicked" : "child2-button"}
               text="Feature"
               handleClick={() =>
-                setUrl("/api/get-suggestions-by-category/Feature")
+                handleClick("/api/get-suggestions-by-category/Feature", 5)
               }
-            />
+            /> */}
           </div>
         </div>
         <div className="item2">
