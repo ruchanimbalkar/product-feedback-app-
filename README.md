@@ -25,13 +25,13 @@ This is what you can do on the app:
 
 - **You can view all the suggestions.**
 - **You can filter suggestions based on category (Bug, Enhancement, Feature, UI, and UX).**
-- **You can add a suggestion to the page using the feedback form.**
+- **You can add a suggestion for a particular category to the page using the feedback form.**
 
 ## 🛠️ Tech Stack
 
 **Frontend**
 
-- **Languages:** **HTML, CSS, JAVASCRIPT **
+- **Languages:** **HTML, CSS, JAVASCRIPT**
 - **Framework:** **REACT**
 - **Deployment:** **NETLIFY**
 
