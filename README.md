@@ -16,12 +16,15 @@ Check out the app: https://product-feedback-app-by-rucha.netlify.app/
 **Feedback Form**
 ![Form Page](./client/public/form.png)
 
+**Feedback Form**
+![Form Page](./client/public/form2.png)
+
 ## ✨ Features
 
 This is what you can do on the app:
 
 - **You can view all the suggestions.**
-- **You can filter suggestions based on category.**
+- **You can filter suggestions based on category (Bug, Enhancement, Feature, UI, and UX).**
 - **You can add a suggestion to the page using the feedback form.**
 
 ## 🛠️ Tech Stack
