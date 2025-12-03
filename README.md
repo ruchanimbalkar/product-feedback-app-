@@ -2,7 +2,7 @@
 
 ## 📌 Project Description & Purpose
 
-This project is ** a place to give feedback about an app by providing suggestions to improve the UX/UI, add enhancement or a new feature. **
+This project is **a place to give feedback about an app by providing suggestions to improve the UX/UI, add enhancement or a new feature.**
 
 ## 🚀 Live Site
 
@@ -10,15 +10,11 @@ Check out the app: https://product-feedback-app-by-rucha.netlify.app/
 
 ## 🖼️ Screenshots
 
-Here is where you'll include a screenshot of your project to show it off!
+**Home Page**
+![Home Page](./client/public/home.png)
 
-Your instructor will walk you through this process with the rest of the class. Please be patient until the time comes! In the meantime, you can fill out all other sections of this template.
-
-1. Use `Command + Control + Shift + 4` to take a screenshot of your site and copy the screenshot to your clipboard
-2. Find your Github README.md file on the Github website
-3. Edit the site by clicking on the Pencil icon ✏️
-4. Move your cursor to the position where you want to paste the screenshot, then paste it. Github will convert the pasted screenshot into an `<img>` tag
-5. Select "Commit changes..." to save your changes
+**Feedback Form**
+![Form Page](./client/public/form.png)
 
 ## ✨ Features
 
