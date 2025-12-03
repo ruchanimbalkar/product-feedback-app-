@@ -14,7 +14,7 @@ Base URL: `https://product-feedback-app-tegr.onrender.com`
 
 ### 🔹 GET `/get-all-suggestions`
 
-**Description:** Retrieves all suggestions in the database system \*\*
+**Description:Retrieves all suggestions in the database system.**
 
 **Example Request URL:**
 
@@ -45,7 +45,7 @@ https://product-feedback-app-tegr.onrender.com/get-all-suggestions
 
 ### 🔹 GET `/get-suggestions-by-category/:category`
 
-**Description:** ** Retrieves the suggestion by category selected by user. **
+**Description:Retrieves the suggestion by category selected by user.**
 
 **Example Request URL:**
 

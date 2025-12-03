@@ -78,12 +78,10 @@ export default function Home() {
           </div>
           <div className="child2">
             <Button
-              className={click}
               text="All"
               handleClick={() => setUrl("/api/get-all-suggestions")}
             />
             <Button
-              className={click}
               text="UX"
               handleClick={() => setUrl("/api/get-suggestions-by-category/UX")}
             />
