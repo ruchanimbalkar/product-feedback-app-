@@ -24,10 +24,9 @@ Your instructor will walk you through this process with the rest of the class. P
 
 This is what you can do on the app:
 
-- ***
-- ***
-- ***
-- ***
+- **You can view all the suggestions.**
+- **You can filter suggestions based on category.**
+- **You can add a suggestion to the page using the feedback form.**
 
 ## 🛠️ Tech Stack
 
@@ -73,19 +72,19 @@ CREATE TABLE suggestions
 
 ## 💭 Reflections
 
-**What I learned:** \***\*\_\_\_\*\***
+**What I learned:I learned how to build a full stack app using REACT, Express and postgreSQL.**
 
-**What I'm proud of:** \***\*\_\_\_\*\***
+**What I'm proud of: I am proud of building this app and adding suggestions in the database.**
 
-**What challenged me:** \***\*\_\_\_\*\***
+**What challenged me: The styling part was slightly challenging for me.**
 
 **Future ideas for how I'd continue building this project:**
 
-1. ***
-2. ***
-3. ***
+1. Upvote Suggestions
+2. Log in for Users
+3. Implement multi-filtering
 
 ## 🙌 Credits & Shoutouts
 
-Thanks to **Prof. Arianna ** for **her instructions, guidance, and support during this project**!
+Thanks to **Prof. Arianna** for **her instructions, guidance, and support during this project**!
 And thanks to **Bakari** and **Makeba** for **their help and support during this project**!
