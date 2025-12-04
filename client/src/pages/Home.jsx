@@ -25,9 +25,8 @@ export default function Home() {
     let result = click.map((_, i) => {
       if (i != index) {
         return false;
-      } else {
-        return true;
       }
+      return true;
     });
     console.log("result", result);
     setClick(result);

@@ -1,4 +1,4 @@
-export default buttonData = [
+const buttonData = [
   {
     text: "All",
     url: "/api/get-all-suggestions",
@@ -30,3 +30,5 @@ export default buttonData = [
     index: 5,
   },
 ];
+
+export default buttonData;

@@ -25,7 +25,7 @@ app.listen(port, () => {
 }); //this method is turning on our server
 
 app.get("/", (req, res) => {
-  res.send("Hi, Sever is ON!");
+  res.send("Hi, Server is ON!");
 });
 
 //Helper Functions
