@@ -102,46 +102,6 @@ export default function Home() {
                 key={"index_" + i}
               />
             ))}
-            {/* <Button
-              className={click[0] ? "clicked" : "child2-button"}
-              text="All"
-              handleClick={() => handleClick("/api/get-all-suggestions", 0)}
-            />
-            <Button
-              className={click[1] === true ? "clicked" : "child2-button"}
-              text="UX"
-              handleClick={() =>
-                handleClick("/api/get-suggestions-by-category/UX", 1)
-              }
-            /> */}
-            {/* <Button
-              className={click[2] === true ? "clicked" : "child2-button"}
-              text="UI"
-              handleClick={() =>
-                handleClick("/api/get-suggestions-by-category/UI", 2)
-              }
-            />
-            <Button
-              className={click[3] === true ? "clicked" : "child2-button"}
-              text="Enhancement"
-              handleClick={() =>
-                handleClick("/api/get-suggestions-by-category/Enhancement", 3)
-              }
-            />
-            <Button
-              className={click[4] === true ? "clicked" : "child2-button"}
-              text="Bug"
-              handleClick={() =>
-                handleClick("/api/get-suggestions-by-category/Bug", 4)
-              }
-            />
-            <Button
-              className={click[5] === true ? "clicked" : "child2-button"}
-              text="Feature"
-              handleClick={() =>
-                handleClick("/api/get-suggestions-by-category/Feature", 5)
-              }
-            /> */}
           </div>
         </div>
         <div className="item2">
