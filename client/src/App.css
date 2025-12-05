@@ -127,6 +127,11 @@ header {
   gap: 0.2rem;
 }
 
+.child2 {
+  background-color: var(--whyt);
+  border-radius: 0.3rem;
+  padding: 0.5rem;
+}
 /*common styles in card buttons and filter buttons*/
 .card button,
 .child2 button {
@@ -162,7 +167,10 @@ header {
 }
 
 /*Tablet Dimensions*/
-@media (min-width: 700px) {
+@media (min-width: 750px) {
+  .hamburger-menu {
+    display: none;
+  }
   .container {
     grid-template-columns: 1fr;
     margin: 2rem auto;
@@ -208,6 +216,9 @@ header {
 
 /*Desktop Dimensions*/
 @media (min-width: 1025px) {
+  .hamburger-menu {
+    display: none;
+  }
   .container {
     padding: 4rem;
     max-width: 1100px;
@@ -234,12 +245,6 @@ header {
     max-width: 15rem;
   }
 
-  .child2 {
-    background-color: var(--whyt);
-    border-radius: 0.3rem;
-    padding: 0.5rem;
-  }
-
   .item2 {
     grid-column: 2/4;
     display: grid;
@@ -256,5 +261,17 @@ header {
     justify-content: space-between;
     gap: 0.8rem;
     grid-row: 1/2;
+  }
+}
+
+@media (max-width: 699px) {
+  .hamburger-menu {
+    display: block;
+  } /* show it on small screens */
+  .active {
+    display: block;
+  }
+  .inactive {
+    display: none;
   }
 }

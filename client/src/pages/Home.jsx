@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 //import react icons
+import { RxHamburgerMenu } from "react-icons/rx";
 import { IoBulbOutline } from "react-icons/io5";
 //Reference : https://cloudinary.com/guides/web-performance/5-ways-to-import-images-in-react-bonus-automation-method
 import myImage from "../assets/suggestions/illustration-empty.svg";
@@ -8,6 +9,7 @@ import buttonData from "../buttonData.js";
 //import components
 import Button from "../components/Button.jsx";
 import Card from "../components/Card.jsx";
+
 export default function Home() {
   //Create a variable category and setter function using useState
   const [suggestions, setSuggestions] = useState([]);
@@ -17,7 +19,20 @@ export default function Home() {
   const [url, setUrl] = useState("/api/get-all-suggestions");
   //Create a variable click and setter function using useState
   const [click, setClick] = useState([true, false, false, false, false, false]);
+  const [isMenuActive, setIsMenuActive] = useState(false);
   const bulbIcon = <IoBulbOutline />;
+  let buttonNavJsx = (
+    <>
+      {buttonData.map((item, i) => (
+        <Button
+          className={click[item.index] ? "clicked" : "child2-button"}
+          text={item.text}
+          handleClick={() => handleClick(item.url, item.index)}
+          key={"index_" + i}
+        />
+      ))}
+    </>
+  );
 
   let handleClick = (newUrl, index) => {
     setUrl(newUrl);
@@ -92,16 +107,15 @@ export default function Home() {
           <div className="child1">
             <h1> My Company</h1>
             <p>Feedback board</p>
+            <Button
+              className="hamburger-menu"
+              // Reference : https://khuang159.medium.com/creating-a-hamburger-menu-in-react-f22e5ae442cb
+              handleClick={() => setIsMenuActive(!isMenuActive)}
+              text={<RxHamburgerMenu />}
+            />
           </div>
-          <div className="child2">
-            {buttonData.map((item, i) => (
-              <Button
-                className={click[item.index] ? "clicked" : "child2-button"}
-                text={item.text}
-                handleClick={() => handleClick(item.url, item.index)}
-                key={"index_" + i}
-              />
-            ))}
+          <div className={`child2 ${isMenuActive ? "active" : "inactive"}`}>
+            {buttonNavJsx}
           </div>
         </div>
         <div className="item2">
